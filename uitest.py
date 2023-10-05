@@ -1,12 +1,13 @@
 from moduls import materialsSections, materials, pricesSections, pricesTypes, prices, measures, criteriaSections, criteria, providers
-import methods, config, requests
+import methods
+import config
+import requests
 import json
 domen = config.domen
 
+
 class bug_treker:
     x = ""
-    
-
 
 
 def funmaterialsSections():
@@ -17,12 +18,14 @@ def funmaterialsSections():
         materialsSections.Get(bug_treker, data, "я люблю персики")
         materialsSections.IdDelete(bug_treker, data)
         materialsSections.Get(bug_treker, data)
-        materialsSections.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        materialsSections.IdDelete(bug_treker, data, "удаление 0 записей")
         print("")
         print("")
         print("")
     except:
         print("funmaterialsSections попытался крашнуть")
+
 
 def funmaterials():
     try:
@@ -32,12 +35,14 @@ def funmaterials():
         materials.Get(bug_treker, data, "я люблю персики")
         materials.IdDelete(bug_treker, data)
         materials.Get(bug_treker, data)
-        materials.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        materials.IdDelete(bug_treker, data, "удаление 0 записей")
         print("")
         print("")
         print("")
     except:
         print("funmaterials попытался крашнуть")
+
 
 def funpricesSections():
     try:
@@ -47,12 +52,14 @@ def funpricesSections():
         pricesSections.Get(bug_treker, data, "я люблю персики")
         pricesSections.IdDelete(bug_treker, data)
         pricesSections.Get(bug_treker, data)
-        pricesSections.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        pricesSections.IdDelete(bug_treker, data, "удаление 0 записей")
         print("")
         print("")
         print("")
     except:
         print("funpricesSections попытался крашнуть")
+
 
 def funpricesTypes():
     try:
@@ -62,12 +69,14 @@ def funpricesTypes():
         pricesTypes.Get(bug_treker, data, "я люблю персики")
         pricesTypes.IdDelete(bug_treker, data)
         pricesTypes.Get(bug_treker, data)
-        pricesTypes.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        pricesTypes.IdDelete(bug_treker, data, "удаление 0 записей")
         print("")
         print("")
         print("")
     except:
         print("funpricesTypes попытался крашнуть")
+
 
 def funprices():
     try:
@@ -77,12 +86,13 @@ def funprices():
         prices.Get(bug_treker, data, "я люблю персики")
         prices.IdDelete(bug_treker, data)
         prices.Get(bug_treker, data)
-        #prices.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # prices.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
         print("")
         print("")
         print("")
     except:
         print("funprices попытался крашнуть")
+
 
 def funmeasures():
     try:
@@ -92,12 +102,14 @@ def funmeasures():
         measures.Get(bug_treker, data, "я люблю персики")
         measures.IdDelete(bug_treker, data)
         measures.Get(bug_treker, data)
-        measures.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        measures.IdDelete(bug_treker, data, "удаление 0 записей")
         print("")
         print("")
         print("")
     except:
         print("funmeasures попытался крашнуть")
+
 
 def funcriteriaSections():
     try:
@@ -107,12 +119,14 @@ def funcriteriaSections():
         criteriaSections.Get(bug_treker, data, "я люблю персики")
         criteriaSections.IdDelete(bug_treker, data)
         criteriaSections.Get(bug_treker, data)
-        criteriaSections.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        criteriaSections.IdDelete(bug_treker, data, "удаление 0 записей")
         print("")
         print("")
         print("")
     except:
         print("funcriteriaSections попытался крашнуть")
+
 
 def funcriteria():
     try:
@@ -122,12 +136,14 @@ def funcriteria():
         criteria.Get(bug_treker, data, "я люблю персики")
         criteria.IdDelete(bug_treker, data)
         criteria.Get(bug_treker, data)
-        criteria.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        criteria.IdDelete(bug_treker, data, "удаление 0 записей")
         print("")
         print("")
         print("")
     except:
         print("funcriteriaSections попытался крашнуть")
+
 
 def funproviders():
     try:
@@ -137,12 +153,14 @@ def funproviders():
         providers.Get(bug_treker, data, "я люблю персики")
         providers.IdDelete(bug_treker, data)
         providers.Get(bug_treker, data)
-        providers.IdDelete(bug_treker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        providers.IdDelete(bug_treker, data, "удаление 0 записей")
         print("")
         print("")
         print("")
     except:
         print("funcriteriaSections попытался крашнуть")
+
 
 print("хотите проверить все эндпоинты? y/n")
 question = input()
