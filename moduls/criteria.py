@@ -5,23 +5,25 @@ domen = config.domen
 chapter = "criteria"
 Get_to = "title"
 
-payloadPost = {
-    "title": "я люблю bananas",
-    "description": "я люблю bananas",
-    "type": methods.Getparam("criteriaTypes"),
-    "sectionId": methods.Getparam("criteriaSections")
-}
-payloadPatch = {
-    "title": "я люблю персики",
-    "description": "я люблю персики"
-}
+
+
 
 
 def Post(bug_treker):
+    payloadPost = {
+        "title": "я люблю bananas",
+        "description": "я люблю bananas",
+        "type": methods.Getparam("criteriaTypes"),
+        "sectionId": methods.Getparam("criteriaSections")
+    }
     return methods.funPost(bug_treker, chapter, payloadPost)
 
 
 def IdPatch(bug_treker, data):
+    payloadPatch = {
+        "title": "я люблю персики",
+        "description": "я люблю персики"
+    }
     methods.funIdPatch(bug_treker, data, chapter, payloadPatch)
 
 

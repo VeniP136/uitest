@@ -5,21 +5,23 @@ domen = config.domen
 chapter = "providers"
 Get_to = "name"
 
-payloadPost = {
-    "name": "я люблю bananas",
-    "logo": "я люблю bananas"
-}
-payloadPatch = {
-    "name": "я люблю персики",
-    "logo": "я люблю персики"
-}
+
+
 
 
 def Post(bug_treker):
+    payloadPost = {
+        "name": "я люблю bananas",
+        "logo": "я люблю bananas"
+    }
     return methods.funPost(bug_treker, chapter, payloadPost)
 
 
 def IdPatch(bug_treker, data):
+    payloadPatch = {
+        "name": "я люблю персики",
+        "logo": "я люблю персики"
+    }
     methods.funIdPatch(bug_treker, data, chapter, payloadPatch)
 
 

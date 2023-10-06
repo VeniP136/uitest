@@ -5,24 +5,24 @@ domen = config.domen
 chapter = "materials"
 Get_to = "title"
 
-payloadPost = {
-    "title": "я люблю bananas",
-    "measure": methods.Getparam("measures"),
-    "cost": 100,
-    "provider": methods.Getparam("providers"),
-    "sectionId": methods.Getparam("materialsSections")
-}
-payloadPatch = {
-    "title": "я люблю персики",
-    "cost": 150
-}
 
 
 def Post(bug_treker):
+    payloadPost = {
+        "title": "я люблю bananas",
+        "measure": methods.Getparam("measures"),
+        "cost": 100,
+        "provider": methods.Getparam("providers"),
+        "sectionId": methods.Getparam("materialsSections")
+    }
     return methods.funPost(bug_treker, chapter, payloadPost)
 
 
 def IdPatch(bug_treker, data):
+    payloadPatch = {
+        "title": "я люблю персики",
+        "cost": 150
+    }
     methods.funIdPatch(bug_treker, data, chapter, payloadPatch)
 
 

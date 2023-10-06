@@ -18,7 +18,7 @@ def funmaterialsSections():
         materialsSections.Get(bug_treker, data, "я люблю персики")
         materialsSections.IdDelete(bug_treker, data)
         materialsSections.Get(bug_treker, data)
-        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка.
         materialsSections.IdDelete(bug_treker, data, "удаление 0 записей")
         print("")
         print("")
@@ -164,6 +164,8 @@ def funproviders():
 
 print("хотите проверить все эндпоинты? y/n")
 question = input()
+
+
 if question == "y":
     funmaterialsSections()
     funmaterials()

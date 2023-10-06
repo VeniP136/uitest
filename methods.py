@@ -10,6 +10,7 @@ def Getparam(type):
     params = {}
     response = requests.get(url, params=params)
     response = response.json()
+    # print(response)
     try:
         return response[0]["_id"]
     except:
@@ -30,7 +31,7 @@ def funPost(bug_treker, chapter, payloadPost):
     else:
         bug_treker.x = bug_treker.x + f"{chapter}Post "
         print(
-            f"{f'Post'.ljust(10)}{f'{chapter}не работает'.ljust(40)} {methods.timer(response)}")
+            f"{f'Post'.ljust(10)}{f'{chapter} не работает'.ljust(40)} {methods.timer(response)}")
     return data
 
 
