@@ -49,7 +49,7 @@ def funIdGet(bug_tracker, data, chapter):
 
 
 def funIdPatch(bug_tracker, data, chapter, payloadPatch):
-    print(data)
+    # print(data)
     url = f'{domen}/{chapter}/{data["_id"]}'
     headers = {}
     payload = payloadPatch
