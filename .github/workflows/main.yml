@@ -21,7 +21,7 @@ jobs:
           
       - name: run tests # run main.py
         run: | 
-          python .github/workflows/uitest.py
+          python $HOME/uitest.py
         
         
 
