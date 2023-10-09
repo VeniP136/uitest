@@ -1,4 +1,4 @@
-from moduls import materialsSections, materials, pricesSections, pricesTypes, prices, measures, criteriaSections, criteria, providers, objects, estimates, clients
+from moduls import materialsSections, materials, pricesSections, pricesTypes, prices, measures, criteriaSections, criteria, providers, objects, estimates, clients, statuses
 import methods
 import config
 import requests
@@ -235,6 +235,25 @@ def funclients():
     except:
         bug_tracker.x = bug_tracker.x + "clients попытался крашнуть"
         print("clients попытался крашнуть")
+
+
+def funstatuses():
+    try:
+        data = statuses.Post(bug_tracker)
+        statuses.IdGet(bug_tracker, data)
+        statuses.Get(bug_tracker, data, "я люблю bananas")
+        statuses.IdPatch(bug_tracker, data)
+        statuses.Get(bug_tracker, data, "я люблю персики")
+        statuses.IdDelete(bug_tracker, data)
+        statuses.Get(bug_tracker, data)
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка.
+        statuses.IdDelete(bug_tracker, data, "удаление 0 записей")
+        print("")
+        print("")
+        print("")
+    except:
+        bug_tracker.x = bug_tracker.x + "statuses попытался крашнуть"
+        print("statuses попытался крашнуть")
 
 
 print("хотите проверить все эндпоинты? y/n")

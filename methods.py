@@ -28,7 +28,7 @@ def funPost(bug_tracker, chapter, payloadPost):
         data = data[0]
     except:
         data = data
-    # print(data)
+    print(data)
     if response.status_code == 201:
         print(
             f"{f'Post'.ljust(10)}{ f'Success {chapter}'.ljust(40)} {methods.timer(response)}")
