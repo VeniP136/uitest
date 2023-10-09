@@ -208,7 +208,7 @@ def funestimates():
         estimates.Get(bug_tracker, data, "я люблю персики")
         estimates.IdDelete(bug_tracker, data)
         estimates.Get(bug_tracker, data)
-        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
+        # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка.
         estimates.IdDelete(bug_tracker, data, "удаление 0 записей")
         print("")
         print("")
