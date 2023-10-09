@@ -2,22 +2,39 @@ import requests
 import config
 import methods
 domen = config.domen
-chapter = "providers"
+chapter = "clients"
 Get_to = "name"
 
 
 def Post(bug_tracker):
     payloadPost = {
         "name": "я люблю bananas",
-        "logo": "я люблю bananas"
+        "fullName": "string",
+        "email": "string",
+        "telephone": "string",
+        "contactFace": "string",
+        "address": "string",
+        "legalAddress": "string",
+        "description": "string",
+        "type": "string",
+        "explanation": "string",
+        "passport": "string",
+        "INN": "string",
+        "KPP": "string",
+        "OGRN": "string",
+        "OGRNIP": "string",
+        "OKPO": "string",
+        "BIK": "string",
+        "correspondentAccount": "string",
+        "bankName": "string",
+        "checkingAccount": "string"
     }
     return methods.funPost(bug_tracker, chapter, payloadPost)
 
 
 def IdPatch(bug_tracker, data):
     payloadPatch = {
-        "name": "я люблю персики",
-        "logo": "я люблю персики"
+        "name": "я люблю персики"
     }
     methods.funIdPatch(bug_tracker, data, chapter, payloadPatch)
 

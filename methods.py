@@ -17,11 +17,11 @@ def Getparam(type):
         return response["data"][0]["_id"]
 
 
-def funPost(bug_treker, chapter, payloadPost):
+def funPost(bug_tracker, chapter, payloadPost):
     url = f'{domen}/{chapter}'
     headers = {}
     payload = payloadPost
-
+    # print(payload)
     response = requests.post(url, headers=headers, json=payload)
     data = response.json()
     # print(data)
@@ -29,13 +29,27 @@ def funPost(bug_treker, chapter, payloadPost):
         print(
             f"{f'Post'.ljust(10)}{ f'Success {chapter}'.ljust(40)} {methods.timer(response)}")
     else:
-        bug_treker.x = bug_treker.x + f"{chapter}Post "
+        bug_tracker.x = bug_tracker.x + f"{chapter}Post "
         print(
             f"{f'Post'.ljust(10)}{f'{chapter} не работает'.ljust(40)} {methods.timer(response)}")
     return data
 
 
-def funIdPatch(bug_treker, data, chapter, payloadPatch):
+def funIdGet(bug_tracker, data, chapter):
+    url = f'{domen}/{chapter}/{data["_id"]}'
+    response = requests.get(url, params={})
+    data = response.json()
+    if response.status_code == 200:
+        print(
+            f"{f'Get'.ljust(10)}{f'Success {chapter}'.ljust(40)} {methods.timer(response)}")
+    else:
+        bug_tracker.x = bug_tracker.x + f"{chapter}IdGet "
+        print(
+            f"{f'Get'.ljust(10)}{f'{chapter}Id не работает'.ljust(40)} {methods.timer(response)}")
+
+
+def funIdPatch(bug_tracker, data, chapter, payloadPatch):
+    print(data)
     url = f'{domen}/{chapter}/{data["_id"]}'
     headers = {}
     payload = payloadPatch
@@ -45,12 +59,12 @@ def funIdPatch(bug_treker, data, chapter, payloadPatch):
         print(
             f"{f'Patch'.ljust(10)}{f'Success {chapter}Id'.ljust(40)} {methods.timer(response)}")
     else:
-        bug_treker.x = bug_treker.x + f"{chapter}IdPatch "
+        bug_tracker.x = bug_tracker.x + f"{chapter}IdPatch "
         print(
             f"{f'Patch'.ljust(10)}{f'{chapter}Id не работает'.ljust(40)} {methods.timer(response)}")
 
 
-def funGet(bug_treker, data, chapter, Get_to, param=""):
+def funGet(bug_tracker, data, chapter, Get_to, param=""):
     url = f'{domen}/{chapter}'
     response = requests.get(url, params={})
     data = response.json()
@@ -62,7 +76,7 @@ def funGet(bug_treker, data, chapter, Get_to, param=""):
     found = any(item[Get_to] == param for item in data)
     if param == "":
         if found:
-            bug_treker.x = bug_treker.x + f"{chapter}Get "
+            bug_tracker.x = bug_tracker.x + f"{chapter}Get "
             print(
                 f"{f'Get'.ljust(10)}{f'{chapter}IdDelete не удалил'.ljust(40)} {methods.timer(response)}")
         else:
@@ -73,12 +87,12 @@ def funGet(bug_treker, data, chapter, Get_to, param=""):
             print(
                 f"{f'Get'.ljust(10)}{f'Success {chapter}'.ljust(40)} {methods.timer(response)}")
         else:
-            bug_treker.x = bug_treker.x + f"{chapter}Get "
+            bug_tracker.x = bug_tracker.x + f"{chapter}Get "
             print(
                 f"{f'Get'.ljust(10)}{f'{chapter} не работает'.ljust(40)} {methods.timer(response)}")
 
 
-def funIdDelete(bug_treker, data, chapter, param=""):
+def funIdDelete(bug_tracker, data, chapter, param=""):
     url = f'{domen}/{chapter}/{data["_id"]}'
     params = ""
     response = requests.delete(url, params=params)
@@ -86,14 +100,14 @@ def funIdDelete(bug_treker, data, chapter, param=""):
     # print(response)
     if response.status_code == 200:
         if ((data["deletedCount"] == 0) and (param != "удаление 0 записей")):
-            bug_treker.x = bug_treker.x + f"{chapter}IdDelete "
+            bug_tracker.x = bug_tracker.x + f"{chapter}IdDelete "
             print(
                 f"{f'Delete'.ljust(10)}{f'{chapter}Id ничего не удалил'.ljust(40)} {methods.timer(response)}")
         else:
             print(
                 f"{f'Delete'.ljust(10)}{f'Success {chapter}Id'.ljust(40)} {methods.timer(response)}")
     else:
-        bug_treker.x = bug_treker.x + f"{chapter}IdDelete "
+        bug_tracker.x = bug_tracker.x + f"{chapter}IdDelete "
         print(
             f"{f'Delete'.ljust(10)}{f'{chapter}Id не работает'.ljust(40)} {methods.timer(response)}")
 

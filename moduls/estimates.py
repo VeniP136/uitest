@@ -2,24 +2,25 @@ import requests
 import config
 import methods
 domen = config.domen
-chapter = "criteria"
-Get_to = "title"
+chapter = "estimates"
+Get_to = "name"
 
 
 def Post(bug_tracker):
     payloadPost = {
-        "title": "я люблю bananas",
-        "description": "я люблю bananas",
-        "type": methods.Getparam("criteriaTypes"),
-        "sectionId": methods.Getparam("criteriaSections")
+        "name": "я люблю bananas",
+        "number": 0,
+        "objectId": methods.Getparam("objects"),
+        "prices": [
+            methods.Getparam("prices")
+        ]
     }
     return methods.funPost(bug_tracker, chapter, payloadPost)
 
 
 def IdPatch(bug_tracker, data):
     payloadPatch = {
-        "title": "я люблю персики",
-        "description": "я люблю персики"
+        "name": "я люблю персики"
     }
     methods.funIdPatch(bug_tracker, data, chapter, payloadPatch)
 

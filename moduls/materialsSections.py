@@ -6,30 +6,31 @@ chapter = "materialsSections"
 Get_to = "title"
 
 
-
-
-
-def Post(bug_treker):
+def Post(bug_tracker):
     payloadPost = {
         "title": "я люблю bananas",
         "description": "я люблю bananas",
         "group": methods.Getparam("materials")
     }
-    return methods.funPost(bug_treker, chapter, payloadPost)
+    return methods.funPost(bug_tracker, chapter, payloadPost)
 
 
-def IdPatch(bug_treker, data):
+def IdPatch(bug_tracker, data):
     payloadPatch = {
         "title": "я люблю персики",
         "description": "я люблю персики",
         "group": methods.Getparam("materials")
     }
-    methods.funIdPatch(bug_treker, data, chapter, payloadPatch)
+    methods.funIdPatch(bug_tracker, data, chapter, payloadPatch)
 
 
-def Get(bug_treker, data, param=""):
-    methods.funGet(bug_treker, data, chapter, Get_to, param)
+def IdGet(bug_tracker, data):
+    methods.funIdGet(bug_tracker, data, chapter)
 
 
-def IdDelete(bug_treker, data, param=""):
-    methods.funIdDelete(bug_treker, data, chapter, param)
+def Get(bug_tracker, data, param=""):
+    methods.funGet(bug_tracker, data, chapter, Get_to, param)
+
+
+def IdDelete(bug_tracker, data, param=""):
+    methods.funIdDelete(bug_tracker, data, chapter, param)
