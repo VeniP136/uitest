@@ -16,7 +16,7 @@ def Post(bug_tracker):
         "address": "string",
         "legalAddress": "string",
         "description": "string",
-        "type": "string",
+        "status": methods.Getparam("statuses"),
         "explanation": "string",
         "passport": "string",
         "INN": "string",
@@ -27,7 +27,7 @@ def Post(bug_tracker):
         "BIK": "string",
         "correspondentAccount": "string",
         "bankName": "string",
-        "checkingAccount": "string"
+        "checkingAccount": "string",
     }
     return methods.funPost(bug_tracker, chapter, payloadPost)
 

@@ -24,6 +24,10 @@ def funPost(bug_tracker, chapter, payloadPost):
     # print(payload)
     response = requests.post(url, headers=headers, json=payload)
     data = response.json()
+    try:
+        data = data[0]
+    except:
+        data = data
     # print(data)
     if response.status_code == 201:
         print(
