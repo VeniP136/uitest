@@ -21,7 +21,7 @@ jobs:
           
       - name: run tests # run main.py
         run: | 
-          python ${{ github.action_path }}/.github/workflows/uitest.py
+          python ${{ github.action_path }}/moduls/uitest.py
         
         
 
