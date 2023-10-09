@@ -25,8 +25,12 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt;
-        python ./uitest.py
+        uses: py-actions/py-dependency-install@v4
+        with:
+            path: "requirements.txt"
+    - name: run tests # run main.py
+      run: python ./uitest.py
+        
         
 
       
