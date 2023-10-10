@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ "main" ]
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,3 +27,11 @@ jobs:
       - name: run tests # run main.py
         run: | 
           python uitest.py
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v2
+      - name: Empty Step
+        run: |
+          echo "This is an empty step."
