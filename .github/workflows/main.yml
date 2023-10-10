@@ -21,8 +21,5 @@ jobs:
           
       - name: run tests # run main.py
         run: | 
-          python ../uitest.py
-        
-        
-
-      
+          pwd
+          python ${{ github.action_path }}/uitest.py
