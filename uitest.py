@@ -340,4 +340,4 @@ if bug_tracker.x == "":
     print("Success")
 else:
     print("ошибки в " + bug_tracker.x)
-# input()
+input()
