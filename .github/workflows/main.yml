@@ -27,5 +27,3 @@ jobs:
       - name: run tests # run main.py
         run: | 
           python uitest.py
-  build:
-    runs-on: ubuntu-latest
