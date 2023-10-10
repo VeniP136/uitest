@@ -257,7 +257,7 @@ def funstatuses():
 
 
 print("хотите проверить все эндпоинты? y/n")
-question = input()
+question = "y"  # input()
 
 
 if question == "y":
