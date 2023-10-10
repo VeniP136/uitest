@@ -8,7 +8,7 @@ Get_to = "title"
 
 def Post(bug_tracker):
     payloadPost = {
-        "title": "я люблю bananas",
+        "title": config.test_create,
         "measure": methods.Getparam("measures"),
         "cost": 100,
         "group": "string",
@@ -19,7 +19,7 @@ def Post(bug_tracker):
 
 def IdPatch(bug_tracker, data):
     payloadPatch = {
-        "title": "я люблю персики",
+        "title": config.test_change,
         "cost": 150
     }
     methods.funIdPatch(bug_tracker, data, chapter, payloadPatch)

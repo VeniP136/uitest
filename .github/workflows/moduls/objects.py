@@ -8,21 +8,21 @@ Get_to = "name"
 
 def Post(bug_tracker):
     payloadPost = {
-        "name": "я люблю bananas",
-        "description": "я люблю bananas",
+        "name": config.test_create,
+        "description": config.test_create,
         "number": 4,
         "date": "2019-10-09T06:20:48.126Z",
-        "address": "я люблю bananas",
+        "address": config.test_create,
         "client": methods.Getparam("clients"),
         "status": methods.Getparam("statuses")
-        
+
     }
     return methods.funPost(bug_tracker, chapter, payloadPost)
 
 
 def IdPatch(bug_tracker, data):
     payloadPatch = {
-        "name": "я люблю персики"
+        "name": config.test_change
     }
     methods.funIdPatch(bug_tracker, data, chapter, payloadPatch)
 

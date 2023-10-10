@@ -9,7 +9,7 @@ Get_to = "fullName"
 def Post(bug_tracker):
     payloadPost = {
         "name": "bananas",
-        "fullName": "я люблю bananas"
+        "fullName": config.test_create
     }
     return methods.funPost(bug_tracker, chapter, payloadPost)
 
@@ -17,7 +17,7 @@ def Post(bug_tracker):
 def IdPatch(bug_tracker, data):
     payloadPatch = {
         "name": "персики",
-        "fullName": "я люблю персики"
+        "fullName": config.test_change
     }
     methods.funIdPatch(bug_tracker, data, chapter, payloadPatch)
 

@@ -14,9 +14,9 @@ def funmaterialsSections():
     try:
         data = materialsSections.Post(bug_tracker)
         materialsSections.IdGet(bug_tracker, data)
-        materialsSections.Get(bug_tracker, data, "я люблю bananas")
+        materialsSections.Get(bug_tracker, data, config.test_create)
         materialsSections.IdPatch(bug_tracker, data)
-        materialsSections.Get(bug_tracker, data, "я люблю персики")
+        materialsSections.Get(bug_tracker, data, config.test_change)
         materialsSections.IdDelete(bug_tracker, data)
         materialsSections.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка.
@@ -33,9 +33,9 @@ def funmaterials():
     try:
         data = materials.Post(bug_tracker)
         materials.IdGet(bug_tracker, data)
-        materials.Get(bug_tracker, data, "я люблю bananas")
+        materials.Get(bug_tracker, data, config.test_create)
         materials.IdPatch(bug_tracker, data)
-        materials.Get(bug_tracker, data, "я люблю персики")
+        materials.Get(bug_tracker, data, config.test_change)
         materials.IdDelete(bug_tracker, data)
         materials.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
@@ -52,9 +52,9 @@ def funpricesSections():
     try:
         data = pricesSections.Post(bug_tracker)
         pricesSections.IdGet(bug_tracker, data)
-        pricesSections.Get(bug_tracker, data, "я люблю bananas")
+        pricesSections.Get(bug_tracker, data, config.test_create)
         pricesSections.IdPatch(bug_tracker, data)
-        pricesSections.Get(bug_tracker, data, "я люблю персики")
+        pricesSections.Get(bug_tracker, data, config.test_change)
         pricesSections.IdDelete(bug_tracker, data)
         pricesSections.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
@@ -71,9 +71,9 @@ def funpricesTypes():
     try:
         data = pricesTypes.Post(bug_tracker)
         pricesTypes.IdGet(bug_tracker, data)
-        pricesTypes.Get(bug_tracker, data, "я люблю bananas")
+        pricesTypes.Get(bug_tracker, data, config.test_create)
         pricesTypes.IdPatch(bug_tracker, data)
-        pricesTypes.Get(bug_tracker, data, "я люблю персики")
+        pricesTypes.Get(bug_tracker, data, config.test_change)
         pricesTypes.IdDelete(bug_tracker, data)
         pricesTypes.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
@@ -90,9 +90,9 @@ def funprices():
     try:
         data = prices.Post(bug_tracker)
         prices.IdGet(bug_tracker, data)
-        prices.Get(bug_tracker, data, "я люблю bananas")
+        prices.Get(bug_tracker, data, config.test_create)
         prices.IdPatch(bug_tracker, data)
-        prices.Get(bug_tracker, data, "я люблю персики")
+        prices.Get(bug_tracker, data, config.test_change)
         prices.IdDelete(bug_tracker, data)
         prices.Get(bug_tracker, data)
         # prices.IdDelete(bug_tracker, data, "удаление 0 записей") #"удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
@@ -108,9 +108,9 @@ def funmeasures():
     try:
         data = measures.Post(bug_tracker)
         measures.IdGet(bug_tracker, data)
-        measures.Get(bug_tracker, data, "я люблю bananas")
+        measures.Get(bug_tracker, data, config.test_create)
         measures.IdPatch(bug_tracker, data)
-        measures.Get(bug_tracker, data, "я люблю персики")
+        measures.Get(bug_tracker, data, config.test_change)
         measures.IdDelete(bug_tracker, data)
         measures.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
@@ -127,9 +127,9 @@ def funcriteriaSections():
     try:
         data = criteriaSections.Post(bug_tracker)
         criteriaSections.IdGet(bug_tracker, data)
-        criteriaSections.Get(bug_tracker, data, "я люблю bananas")
+        criteriaSections.Get(bug_tracker, data, config.test_create)
         criteriaSections.IdPatch(bug_tracker, data)
-        criteriaSections.Get(bug_tracker, data, "я люблю персики")
+        criteriaSections.Get(bug_tracker, data, config.test_change)
         criteriaSections.IdDelete(bug_tracker, data)
         criteriaSections.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
@@ -146,9 +146,9 @@ def funcriteria():
     try:
         data = criteria.Post(bug_tracker)
         criteria.IdGet(bug_tracker, data)
-        criteria.Get(bug_tracker, data, "я люблю bananas")
+        criteria.Get(bug_tracker, data, config.test_create)
         criteria.IdPatch(bug_tracker, data)
-        criteria.Get(bug_tracker, data, "я люблю персики")
+        criteria.Get(bug_tracker, data, config.test_change)
         criteria.IdDelete(bug_tracker, data)
         criteria.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
@@ -165,9 +165,9 @@ def funproviders():
     try:
         data = providers.Post(bug_tracker)
         providers.IdGet(bug_tracker, data)
-        providers.Get(bug_tracker, data, "я люблю bananas")
+        providers.Get(bug_tracker, data, config.test_create)
         providers.IdPatch(bug_tracker, data)
-        providers.Get(bug_tracker, data, "я люблю персики")
+        providers.Get(bug_tracker, data, config.test_change)
         providers.IdDelete(bug_tracker, data)
         providers.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка
@@ -184,9 +184,9 @@ def funobjects():
     try:
         data = objects.Post(bug_tracker)
         objects.IdGet(bug_tracker, data)
-        objects.Get(bug_tracker, data, "я люблю bananas")
+        objects.Get(bug_tracker, data, config.test_create)
         objects.IdPatch(bug_tracker, data)
-        objects.Get(bug_tracker, data, "я люблю персики")
+        objects.Get(bug_tracker, data, config.test_change)
         objects.IdDelete(bug_tracker, data)
         objects.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка.
@@ -203,9 +203,9 @@ def funestimates():
     try:
         data = estimates.Post(bug_tracker)
         estimates.IdGet(bug_tracker, data)
-        estimates.Get(bug_tracker, data, "я люблю bananas")
+        estimates.Get(bug_tracker, data, config.test_create)
         estimates.IdPatch(bug_tracker, data)
-        estimates.Get(bug_tracker, data, "я люблю персики")
+        estimates.Get(bug_tracker, data, config.test_change)
         estimates.IdDelete(bug_tracker, data)
         estimates.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка.
@@ -222,9 +222,9 @@ def funclients():
     try:
         data = clients.Post(bug_tracker)
         clients.IdGet(bug_tracker, data)
-        clients.Get(bug_tracker, data, "я люблю bananas")
+        clients.Get(bug_tracker, data, config.test_create)
         clients.IdPatch(bug_tracker, data)
-        clients.Get(bug_tracker, data, "я люблю персики")
+        clients.Get(bug_tracker, data, config.test_change)
         clients.IdDelete(bug_tracker, data)
         clients.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка.
@@ -241,9 +241,9 @@ def funstatuses():
     try:
         data = statuses.Post(bug_tracker)
         statuses.IdGet(bug_tracker, data)
-        statuses.Get(bug_tracker, data, "я люблю bananas")
+        statuses.Get(bug_tracker, data, config.test_create)
         statuses.IdPatch(bug_tracker, data)
-        statuses.Get(bug_tracker, data, "я люблю персики")
+        statuses.Get(bug_tracker, data, config.test_change)
         statuses.IdDelete(bug_tracker, data)
         statuses.Get(bug_tracker, data)
         # "удаление 0 записей" не защищает от удаления, это значит что удаление 0 записей не ошибка.
@@ -277,7 +277,7 @@ elif question == "n":
     print("введите блоки которые хотите проверить(например 1236)\n")
     print("1 - materialsSections")
     print("2 - materials")
-    print("3 - pricesTypes")
+    print("3 - pricesSections")
     print("4 - pricesTypes")
     print("5 - prices")
     print("6 - measures")
@@ -305,7 +305,7 @@ elif question == "n":
         funproviders()
 
     print("введите блоки 2 группы которые хотите проверить(например 1236)\n")
-    print("1 - funobjects")
+    print("1 - objects")
     print("2 - estimates")
     print("3 - clients")
     # print("4 - pricesTypes")

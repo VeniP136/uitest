@@ -8,16 +8,16 @@ Get_to = "title"
 
 def Post(bug_tracker):
     payloadPost = {
-        "title": "я люблю bananas",
-        "description": "я люблю bananas"
+        "title": config.test_create,
+        "description": config.test_create
     }
     return methods.funPost(bug_tracker, chapter, payloadPost)
 
 
 def IdPatch(bug_tracker, data):
     payloadPatch = {
-        "title": "я люблю персики",
-        "description": "я люблю персики"
+        "title": config.test_change,
+        "description": config.test_change
     }
     methods.funIdPatch(bug_tracker, data, chapter, payloadPatch)
 
